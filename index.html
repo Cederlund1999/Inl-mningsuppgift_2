@@ -10,19 +10,28 @@
 <body>
     <div class="divclass">
         <header>
-            <input type="text" class="search-box" autocomplete="off"
+            <input type="text" class="searchbox" autocomplete="off"
             placeholder="Search for city..">
+            
         </header>
         <main>
+            <label class="checkbox1"> Show weather
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+            </label>
+            <label class="checkbox1"> Show places
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+            </label>
             <section class="location">
                 <div class="city">Göteborg, SE</div>
                 <div class="date">Wednesday 03 february 2021</div>
             </section>
-            <div class="current">
+            <section class="current">
             <div class="temperature">15<span>°c</span></div>
             <div class="weather">Sunny</div>
-            
-        </div>
+            </section>
+        
         <section class="top3">
             <h3>Places to visit</h3>
             <div class="places" id="place1">hej</div>
