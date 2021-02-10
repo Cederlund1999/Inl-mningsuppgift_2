@@ -76,7 +76,7 @@ main {
     
 }
 
-.places {
+#places {
     display: flex;
     flex-direction: row;
     box-shadow: 0.1vw 0.1vw 0.2vw 0.1vw;
@@ -87,9 +87,11 @@ main {
     align-items: center;
     text-align: center;
     background-color: #81d4fa;
-    border-radius: 25px 10px 25px 10px;
+    border-radius: 10px 10px 10px 10px;
     font-size: large;
-    
+    text-align: left;
+    opacity: 90%;
+    font-weight: bold;
 }
 .top3 {
     display: flex;
