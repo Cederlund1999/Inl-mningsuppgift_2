@@ -46,12 +46,22 @@ fetch(`${weatherApi.base}weather?q=${q}&appid=${weatherApi.key}`)
 
 function displayWeatherResults(response){
     console.log(response);
+    var weatherCheckBox = document.getElementById('weatherBox');
+    if(weatherCheckBox.checked ==true)
+    {
+      document.getElementById('currentWeather').style.display = "block";
+      document.getElementById('currentLocation').style.display ="block";
     let temperature = document.querySelector('.current .temperature');
     temperature.innerHTML = (response.main.temp);
     let city = document.querySelector('.location .city');
     city.innerHTML = (response.name);
     let currentWeather = document.querySelector('.current .weather');
     currentWeather.innerHTML = (response.weather[0].main);
+    } else
+    {
+      document.getElementById('currentWeather').style.display = "none";
+      document.getElementById('currentLocation').style.display ="none";
+    }
 }
 
 function getPlacesResults(q){
@@ -61,13 +71,21 @@ function getPlacesResults(q){
 }
 function displayPlacesResults(venues){
 console.log(venues);
+var venuesCheckBox = document.getElementById('venueBox');
+if(venuesCheckBox.checked ==true)
+{
+  document.getElementById('top3Venues').style.display ="flex";
+  
 let firstMonument = document.querySelector('.top3 .place1');
 firstMonument.innerHTML = (venues.response.venues[0].name + " <br> Adress:  " + venues.response.venues[0].location.address); 
 let secondMonument = document.querySelector('.top3 .place2');
 secondMonument.innerHTML = (venues.response.venues[1].name + " <br> Adress:  " + venues.response.venues[1].location.address);
 let thirdMonument = document.querySelector('.top3 .place3');
 thirdMonument.innerHTML = (venues.response.venues[2].name + " <br> Adress:  " + venues.response.venues[2].location.address);
-
+} else
+{
+document.getElementById('top3Venues').style.display ="none";
+}
 
 }
 
