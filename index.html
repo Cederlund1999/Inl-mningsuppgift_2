@@ -1,48 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Väder App</title>
-    <link rel="stylesheet" href="index.css">
-    
-</head>
-<body>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
     <div class="divclass">
-        <header>
-            <input type="text" class="searchbox" autocomplete="off"
-            placeholder="Search for city..">
-
-        </header>
-        <main>
-            <label class="checkbox" > Show weather
-                <input type="checkbox" id="weatherBox" checked="checked">
-                <span class="checkmark"></span>
-            </label>
-            <label class="checkbox" > Show places
-                <input type="checkbox" id="venueBox" checked="checked">
-                <span class="checkmark"></span>
-            </label>
-            <section class="location" id="currentLocation">
-                <div class="city">Göteborg, SE</div>
-                <div class="date">Wednesday 03 february 2021</div>
-            </section>
-            <section class="current" id="currentWeather">
-            <div class="temperature">15<span>°c</span></div>
-            <div class="weather">Sunny</div>
-            </section>
-        
-        <section class="top3" id="top3Venues">
-            <h3>Monuments to see</h3>
-            <div class="place1" id="places">hej
-            </div>
-            <div class="place2" id="places">tjena</div>
-            <div class="place3" id="places">moss</div>
-    
+      <header>
+        <input
+          type="text"
+          class="searchbox"
+          autocomplete="off"
+          placeholder="Search for city.."
+        />
+      </header>
+      <main>
+        <label class="checkbox">
+          Show weather
+          <input type="checkbox" id="weatherBox" checked="checked" />
+          <span class="checkmark"></span>
+        </label>
+        <label class="checkbox">
+          Show places
+          <input type="checkbox" id="venueBox" checked="checked" />
+          <span class="checkmark"></span>
+        </label>
+        <section class="location" id="currentLocation">
+          <div class="city">Gothenburg, SE</div>
+          <div class="date">Wednesday 03 february 2021</div>
         </section>
-        </main>
-        
+        <section class="current" id="currentWeather">
+          <div class="temperature">5<span>°c</span></div>
+          <div class="weather">Sunny</div>
+
+          <div class="weatherPicture">
+            <img
+              id="weatherPicture"
+              src="http://openweathermap.org/img/w/01d.png"
+              class="weatherPictureClass"
+            />
+          </div>
+        </section>
+
+        <section class="top3" id="top3Venues">
+          <h3>Monuments to see</h3>
+          <div class="place1" id="places">hej</div>
+          <div class="place2" id="places">tjena</div>
+          <div class="place3" id="places">moss</div>
+        </section>
+      </main>
     </div>
-    <script src="main.js"></script> 
-</body>
+    <script src="main.js"></script>
+  </body>
 </html>
