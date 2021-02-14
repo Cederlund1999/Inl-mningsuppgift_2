@@ -34,7 +34,7 @@ function executeSearch(s) {
 }
 
 function getWeatherResults(q) {
-  fetch(`${weatherApi.base}weather?q=${q}&appid=${weatherApi.key}`)
+  fetch(`${weatherApi.base}weather?q=${q}&units=metric&appid=${weatherApi.key}`)
     .then((response) => {
       return response.json();
     })
@@ -55,7 +55,7 @@ function displayWeatherResults(response) {
     document.getElementById("weatherPicture").src = iconURL;
 
     let temperature = document.querySelector(".current .temperature");
-    temperature.innerHTML = response.main.temp;
+    temperature.innerHTML = response.main.temp +"°C";
     let city = document.querySelector(".location .city");
     city.innerHTML = response.name + ", " + response.sys.country;
     let currentWeather = document.querySelector(".current .weather");
